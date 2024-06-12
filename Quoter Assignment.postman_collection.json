@@ -1,0 +1,247 @@
+{
+  "info": {
+    "_postman_id": "291b4cbd-1e10-40b3-bd4c-b58f7782dd8c",
+    "name": "Quoter Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4629391"
+  },
+  "item": [
+    {
+      "name": "Under 500k under 20% down monthly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 100000, \n    \"down_payment\": 5000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"monthly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Under 500k under 20% down bi-weekly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 100000, \n    \"down_payment\": 5000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"bi-weekly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Under 500k under 20% down accel-bi-weekly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 100000, \n    \"down_payment\": 5000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"accel-bi-weekly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Under 500k 20% down monthly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 499999, \n    \"down_payment\": 100000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"monthly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Over 500k under 1 million 20% down monthly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 999999, \n    \"down_payment\": 200000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"monthly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1 million with 20% monthly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 1200000, \n    \"down_payment\": 240000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"monthly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid GET request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid missing price",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \n    \"down_payment\": 240000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"monthly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid schedule",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \n    \"price\": 100000,\n    \"down_payment\": 5000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 25, \n    \"payment_schedule\": \"testing\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid amortization",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \n    \"price\": 100000,\n    \"down_payment\": 5000, \n    \"annual_interest_rate\": 5, \n    \"amortization_period\": 22, \n    \"payment_schedule\": \"monthly\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:{{PORT}}/calculate",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "{{PORT}}",
+          "path": ["calculate"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "PORT",
+      "value": "8080"
+    }
+  ]
+}
