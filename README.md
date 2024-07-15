@@ -1,29 +1,24 @@
-# Quoter Technical Assessment
+## Mortgage Calculator App
 
-## Mortgage Calculator UI
-
-Using a Frontend framework of your choice, build a BC mortgage calculator UI that makes use of the provided Go API Backend. The Backend API handles the business logic for calculating a BC mortgage, and considers CMHC insurance. Additional information about the calculation and restrictions can be found here:
+Mortgage Calculator App that makes use of the Go API Backend. The Backend API handles the business logic for calculating a BC mortgage, and considers CMHC insurance. Additional information about the calculation and restrictions can be found here:
 https://www.ratehub.ca/cmhc-insurance-british-columbia.
 
-Note: The Backend API may not have the same decimal precision as other mortgage calculators. Don't worry if the calculation is a few cents off of what other mortgage calculators show.
+This app also involves, 
+ - API error handling
+ - react form input validations 
+ - unit tests using jest
+ - performance review with lighthouse report
 
-## Requirements
 
-- The UI should include inputs for:
-  - property price
-  - down payment
-  - annual interest rate
-  - amortization period (5 year increments between 5 and 30 years)
-  - payment schedule (accelerated bi-weekly, bi-weekly, monthly)
-- A button to submit the input fields to the API
-- After receiving a response from the API:
-  - if the API response is successful, display payment per payment schedule
-  - if the API response returns an error, display the error message
-
-Bonus Points:
-
-- Client-side input validation
-- Unit tests
+# Tech Stack : 
+- Frontend : 
+  - React
+  - JavaScript
+  - axios
+- Backend : 
+  - Go
+- Unit Tests : 
+  - Jest
 
 ## Running the Go API Backend
 
@@ -37,35 +32,12 @@ $ HTTP_PORT=8080 go run main.go
 
 Now, the API endpoint should be accessible at `http://localhost:8080/calculate`
 
-## API Examples
-
-#### Request
-
-`POST /calculate`
-
-#### Example Request
+## Running the Frontend
 
 ```
-{
-    "price": 80972,
-    "down_payment": 4049,
-    "annual_interest_rate": 5,
-    "amortization_period": 20,
-    "payment_schedule": "monthly"
-}
+$ cd calculator_ui
+$ npm install 
+$ npm start
 ```
 
-#### Example Response
-
-```
-{
-    "payment":527.96,
-    "payment_schedule":"monthly"
-}
-```
-
-Note: Please see POSTMAN collection `Quoter Assignment.postman_collection.josn` for further details
-
-## Assignment Notes
-
-Please Include any notes about your assignment here, including instructions for how to run your project.
+Now, the UI endpoint should be accessible at `http://localhost:3000`
