@@ -9,6 +9,8 @@ This app also involves,
  - unit tests using jest
  - performance review with lighthouse report
 
+ ![alt text](<Screenshot 2024-07-15 143807.png>)
+
 
 # Tech Stack : 
 - Frontend : 
